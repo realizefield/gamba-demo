@@ -85,6 +85,22 @@
   .cta-btn:hover{ opacity:0.85; }
 
   footer { text-align:center; padding:24px; font-size:0.72rem; color:var(--muted); border-top:1px solid #e0e0e0; margin-top:40px; }
+
+  /* 中学復習セクション */
+  .review-section { background:linear-gradient(135deg,#fff8f0 0%,#fef3e6 100%); border:2px solid #f0d9b8; border-radius:14px; padding:24px 22px 26px; margin-bottom:48px; }
+  .review-header { display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
+  .review-badge { background:#c97a2c; color:white; font-size:0.68rem; font-weight:700; padding:3px 10px; border-radius:20px; letter-spacing:0.06em; }
+  .review-label { font-size:0.72rem; color:#8b5a2b; font-weight:700; }
+  .review-title { font-family:'Noto Serif JP',serif; font-size:1.1rem; font-weight:700; color:#5d3a1a; margin-bottom:8px; line-height:1.5; }
+  .review-desc { font-size:0.78rem; color:#6b4828; line-height:1.8; margin-bottom:18px; }
+  .review-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media(max-width:600px){ .review-grid{ grid-template-columns:1fr; } }
+  .review-card { background:white; border-radius:10px; padding:16px 14px; text-decoration:none; color:inherit; display:block; box-shadow:0 2px 8px rgba(139,90,43,0.08); transition:transform 0.2s,box-shadow 0.2s; border:1px solid #f0e0c8; }
+  .review-card:hover { transform:translateY(-2px); box-shadow:0 4px 14px rgba(139,90,43,0.15); }
+  .review-card-emoji { font-size:1.6rem; margin-bottom:6px; }
+  .review-card-cat { font-size:0.6rem; font-weight:700; color:#c97a2c; letter-spacing:0.08em; margin-bottom:3px; }
+  .review-card-name { font-size:0.88rem; font-weight:700; color:var(--text); line-height:1.4; margin-bottom:4px; }
+  .review-card-desc { font-size:0.7rem; color:var(--muted); line-height:1.6; }
 </style>
 </head>
 <body>
@@ -144,9 +160,44 @@
     </div>
   </div>
 
-  <div class="cards-grid">
+  <!-- 中学範囲の復習セクション -->
+  <div class="review-section">
+    <div class="review-header">
+      <span class="review-badge">復習</span>
+      <span class="review-label">中学範囲の総復習</span>
+    </div>
+    <div class="review-title">📚 高校学習の前に　中学範囲の基礎固め</div>
+    <div class="review-desc">
+      「中学の内容に少し不安がある」「もう一度やり直したい」という方のための復習教材です。<br>
+      <b style="color:#8b5a2b">高校英文法・数学・理科に進む前の土台づくりに最適。</b>自分のペースで取り組めます。
+    </div>
+    <div class="review-grid">
 
-    <!-- 英検2級英文法シリーズ（1枚にまとめ） -->
+      <a class="review-card" href="https://realizefield.github.io/j-english/" target="_blank">
+        <div class="review-card-emoji">📘</div>
+        <div class="review-card-cat">英語</div>
+        <div class="review-card-name">中学英文法【復習】</div>
+        <div class="review-card-desc">中1〜中3の英文法を全34単元で総復習。be動詞から不定詞・受動態まで段階的に学習。</div>
+      </a>
+
+      <a class="review-card" href="https://realizefield.github.io/j-engglish-word/" target="_blank">
+        <div class="review-card-emoji">📖</div>
+        <div class="review-card-cat">英語</div>
+        <div class="review-card-name">中学英単語【復習】</div>
+        <div class="review-card-desc">中学英単語1096語を21カテゴリ119単元で効率的に復習。高校英語の基礎固めに。</div>
+      </a>
+
+      <a class="review-card" href="https://realizefield.github.io/gamba-chugaku/gamba_chugaku.html" target="_blank">
+        <div class="review-card-emoji">🔢</div>
+        <div class="review-card-cat">数学</div>
+        <div class="review-card-name">中学数学計算【復習】</div>
+        <div class="review-card-desc">分数・正負の数・文字式・方程式・平方根まで、中学数学の計算分野を導入から確認テストまで。</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="cards-grid">
     <a class="subject-card s2" href="https://realizefield.github.io/kounin_eng_grammer/kounineng-index.html" target="_blank" style="border:3px solid var(--orange);position:relative">
       <div style="position:absolute;top:-1px;right:-1px;background:var(--orange);color:white;font-size:0.62rem;font-weight:700;padding:3px 10px;border-radius:0 12px 0 8px;letter-spacing:0.08em">Unit 1〜12</div>
       <div class="card-top">
